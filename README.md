@@ -1,13 +1,13 @@
 # nuphy-linux
- Fix browser (VIA) not able to connect to nuphy
+ Fixes connectivity issues for nuphy keyboards, under linux devices using udev, in browsers. For apps like ( [usevia.app](https://usevia.app/) or even [nuphy.io](https://www.drive.nuphy.io/) )
  
 # Nuphy udev rules
 
-Welcome to the GitHub repository for the Nuphy udev rules! This repository contains the essential udev rules needed to ensure compatibility and proper permissions for nuphy hardware. These rules are particularly designed to work seamlessly with the VIA web application at [usevia.app](https://usevia.app/).
+Welcome to the GitHub repository for the Nuphy udev rules! This repository contains the essential udev rules needed to ensure compatibility and proper permissions for nuphy hardware. These rules are particularly designed to work seamlessly with the VIA web application at [usevia.app](https://usevia.app/) or even [nuphy.io](https://www.drive.nuphy.io/).
 
 ## Overview
 
-Udev is a device manager for the Linux kernel, which dynamically creates or removes device nodes in the `/dev` directory. For the nuphy keyboards, specific udev rules are required to set the correct permissions, allowing applications like [usevia.app](https://usevia.app/) to interact with them without needing root privileges.
+Udev is a device manager for the Linux kernel, which dynamically creates or removes device nodes in the `/dev` directory. For the nuphy keyboards, specific udev rules are required to set the correct permissions, allowing applications like [usevia.app](https://usevia.app/) and [nuphy.io](https://www.drive.nuphy.io/) to interact with them without needing root privileges.
 
 This repository provides the necessary udev rules to facilitate this interaction, ensuring a smooth and secure experience for users of Nupy Keyboards on Linux systems.
 
@@ -34,6 +34,11 @@ Tested/Added by contributors:
 - NuPhy Air75 v3 (jwa464)
 - NuPhy Field75 (gtrias)
 - NuPhy Air75 HE (venomyt3)
+
+Dongles:
+
+Tested/Added by contributors:
+- Nuphy Kick 75 Upgrader neversun
 - NuPhy Air75 v3 Upgrader (a-szulc)
 
 ## Installation
@@ -57,6 +62,11 @@ Tested/Added by contributors:
 
 3. **Install the Udev Rule:**
 
+   Automated
+   ```bash
+   ./install_rules.sh
+   ```
+
    Manual
    ```bash
    sudo cp nuphy.rules /etc/udev/rules.d/
@@ -65,13 +75,8 @@ Tested/Added by contributors:
    sudo udevadm control --reload-rules && sudo udevadm trigger
    ```
 
-   Automated
-   ```bash
-   ./install_rules.sh
-   ```
-
 4. **Verify Installation:**
-   Connect your Nuphy device and verify if it's detected correctly by the [via](https://usevia.app/) application.
+   Connect your Nuphy device and verify if it's detected correctly by the [via](https://usevia.app/) or [nuphy.io](https://www.drive.nuphy.io/) application.
    Make sure to follow the guide of the [Official website](https://nuphy.com/pages/via-usage-guide-for-nuphy-keyboards) to ensure its working as intended.
    Also keep in mind it might be required to reopen the browser or try in a private tab if you attempted to use via before.
    I had some cached issues with the permissions at first and testing in a private tab helped.
@@ -79,7 +84,7 @@ Tested/Added by contributors:
 ## Usage
 
 Once installed, the udev rules will automatically set the correct permissions for your Nuphy Device.
-This allows the [via](https://usevia.app/) web application to detect and interact with your device without requiring additional configurations.
+This allows the [via](https://usevia.app/) or [nuphy.io](https://www.drive.nuphy.io/) web application to detect and interact with your device without requiring additional configurations.
 
 ---
 
