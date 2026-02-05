@@ -30,6 +30,7 @@ Tested/Added by contributors:
 - Nuphy Air60 HE (Phrozenn1)
 - Nuphy Kick75 (mfiumara)
 - NuPhy Halo65 HE (IcarusSosie)
+- NuPhy Field75 HE (gtrias)
 - NuPhyX BH65 (pigdey)
 - NuPhy Air75 v3 (jwa464)
 - NuPhy Field75 (gtrias)
